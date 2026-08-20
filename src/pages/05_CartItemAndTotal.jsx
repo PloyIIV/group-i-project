@@ -10,8 +10,7 @@ const CartItemAndTotal = () => {
   const { totalCart, setTotalCart } = useContext(MenuContext)
 
   // คำนวณราคาสรุป
-  console.log(totalCart)
-  const subtotal = totalCart.reduce((acc, item) => acc + (item.price), 0);
+  const subtotal = totalCart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
   const shipping = 20;
   const total = subtotal + shipping;
 

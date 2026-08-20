@@ -28,7 +28,7 @@ const CartDropdown = ({ setClick }) => {
               <div className="pl-3">
                 <p className="font-medium">{item.name}</p>
                 <p className="text-gray-600">
-                  จำนวน: <span className="text-black font-semibold">1</span> จาน
+                  จำนวน: <span className="text-black font-semibold">{item.quantity}</span> จาน
                 </p>
               </div>
             </div>

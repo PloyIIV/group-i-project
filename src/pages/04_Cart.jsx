@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import CartItemAndTotal from './05_CartItemAndTotal';
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div>
+      <CartItemAndTotal />
+    </div>
   )
 }
 

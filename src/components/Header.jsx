@@ -1,6 +1,6 @@
 import shoppingCartIcon from "../assets/icon/shopping_cart_icon.png";
 
-function Header() {
+function Header({ setClick, click }) {
   return (
     
     <header className="border-b border-orange-100 bg-white">
@@ -17,6 +17,7 @@ function Header() {
           </a>
           {/* add another button here with anchor dai */}
           <button
+            onClick={() => setClick(!click)}
             type="button"
             aria-label="Open cart"
             className="inline-flex items-center gap-2 rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700"

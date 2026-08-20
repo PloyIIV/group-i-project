@@ -6,9 +6,9 @@ import { useState } from "react"
 const Layout = () => {
     const [click, setClick] = useState(true)
     return (
-        <div>
+        <div className="font-['Prompt']">
             <Header setClick={setClick} click={click} />
-            {click && <CartDropdown />}
+            {click && <CartDropdown setClick={setClick} />}
             <Outlet />
         </div>
     )

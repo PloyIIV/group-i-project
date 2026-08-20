@@ -22,7 +22,7 @@ function Header() {
 
         {/* navbar, use #menu for opening menulist naja */}
         <nav aria-label="Main navigation" className="flex items-center gap-6">
-          <a href="#menu" className="text-sm font-medium text-slate-600 hover:text-red-600">
+          <a href="/#menu" className="text-sm font-medium text-slate-600 hover:text-red-600">
             Menu
           </a>
           {/* add another button here with anchor dai */}

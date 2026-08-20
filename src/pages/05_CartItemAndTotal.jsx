@@ -29,7 +29,7 @@ const CartItemAndTotal = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 bg-[#fbf6f6] min-h-screen">
+    <div className="max-w-2xl mx-auto px-8 py-4 bg-[#fbf6f6] min-h-screen">
 
       {/* 1. ส่วน Header (ปุ่ม Back ด้านซ้าย และชื่อหน้าตรงกลาง) */}
       <div className="flex items-center mb-6">
@@ -120,9 +120,9 @@ const CartItemAndTotal = () => {
           <span className="font-bold text-xl">{total} Baht</span>
         </div>
 
-        {/* ปุ่ม Checkout / Add to cart */}
+        {/* ปุ่ม Checkout / Pay Now */}
         <button className="w-full bg-[#b90015] text-white py-3.5 rounded-xl font-bold text-lg hover:bg-red-800 transition cursor-pointer">
-          Add to cart
+          Pay Now
         </button>
       </div>
 

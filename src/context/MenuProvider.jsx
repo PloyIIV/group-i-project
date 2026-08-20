@@ -12,7 +12,7 @@ export const MenuProvider = ({ children }) => {
 
    return (
     <MenuContext.Provider
-      value={{ menu, setMenu, handleClickAddToCart, totalCart }}
+      value={{ menu, setMenu, handleClickAddToCart, totalCart, setTotalCart }}
     >
       {children}
     </MenuContext.Provider>

@@ -4,11 +4,11 @@ import CartDropdown from "./CartDropdown"
 import { useState } from "react"
 
 const Layout = () => {
-    const [click, setClick] = useState(null)
+    const [click, setClick] = useState(true)
     return (
         <div>
-            <Header />
-            {<CartDropdown />}
+            <Header setClick={setClick} click={click} />
+            {click && <CartDropdown />}
             <Outlet />
         </div>
     )

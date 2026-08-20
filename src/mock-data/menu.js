@@ -77,11 +77,11 @@ export const menuList = [
     spiciness_level: 4
   },
   {
-    "id": 12,
-    "name": "แกงเผ็ดเป็ดย่าง",
-    "price": 160,
-    "pic_url": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&auto=format&fit=crop",
-    "spiciness_level": 3
+    id: 12,
+    name: "แกงเผ็ดเป็ดย่าง",
+    price: 160,
+    pic_url: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&auto=format&fit=crop",
+    spiciness_level: 3
   },
   {
     id: 13,

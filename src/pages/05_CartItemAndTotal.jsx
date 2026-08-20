@@ -120,9 +120,9 @@ const CartItemAndTotal = () => {
           <span className="font-bold text-xl">{total} Baht</span>
         </div>
 
-        {/* ปุ่ม Checkout / ชำระเงิน */}
+        {/* ปุ่ม Checkout / Pay Now */}
         <button className="w-full bg-[#b90015] text-white py-3.5 rounded-xl font-bold text-lg hover:bg-red-800 transition cursor-pointer">
-          ชำระเงิน
+          Pay Now
         </button>
       </div>
 

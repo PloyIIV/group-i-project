@@ -7,12 +7,19 @@ export const MenuProvider = ({ children }) => {
   const [totalCart, setTotalCart] = useState([]);
 
   const handleClickAddToCart = (menu) => {
-    setTotalCart([...totalCart, menu]);
+    if(totalCart.find((item) => item.id === menu.id)) {
+      menu.quantity++
+      setTotalCart([...totalCart])
+    } else {
+      menu.quantity = 1
+      setTotalCart([...totalCart, menu]);
+    }
+    console.log(totalCart)
   };
 
    return (
     <MenuContext.Provider
-      value={{ menu, setMenu, handleClickAddToCart, totalCart }}
+      value={{ menu, setMenu, handleClickAddToCart, totalCart, setTotalCart }}
     >
       {children}
     </MenuContext.Provider>

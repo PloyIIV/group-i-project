@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { menuList } from '../mock-data/menu';
+import { useNavigate } from 'react-router-dom';
+import { MenuContext } from '../context/MenuContext';
 
 const CartItemAndTotal = () => {
+  const navigate = useNavigate()
+
   // ดึงข้อมูลจำลอง 3 รายการแรกมาใช้เป็นข้อมูลตะกร้าสินค้า
-  const [cartItems, setCartItems] = useState([
-    { ...menuList[0], quantity: 1 },
-    { ...menuList[1], quantity: 1 },
-    { ...menuList[2], quantity: 1 },
-  ]);
+  const { totalCart, setTotalCart } = useContext(MenuContext)
 
   // คำนวณราคาสรุป
-  const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+  const subtotal = totalCart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
   const shipping = 20;
   const total = subtotal + shipping;
 
   // ฟังก์ชันปรับจำนวนสินค้า
   const handleUpdateQuantity = (id, amount) => {
-    setCartItems(prevItems =>
+    setTotalCart(prevItems =>
       prevItems.map(item => {
         if (item.id === id) {
           const newQuantity = item.quantity + amount;
@@ -33,8 +33,8 @@ const CartItemAndTotal = () => {
 
       {/* 1. ส่วน Header (ปุ่ม Back ด้านซ้าย และชื่อหน้าตรงกลาง) */}
       <div className="flex items-center mb-6">
-        <button className="p-2 cursor-pointer">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button onClick={() => navigate('/')} className="p-2 cursor-pointer">
+          <svg className="w-6 h-6 bg-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
           </svg>
         </button>
@@ -44,7 +44,7 @@ const CartItemAndTotal = () => {
 
       {/* 2. ส่วนแสดงรายการอาหารในตะกร้า */}
       <div className="space-y-4 mb-6">
-        {cartItems.map((item, index) => (
+        {totalCart.map((item, index) => (
           <div key={index} className="flex bg-white rounded-xl p-3 shadow-sm border border-gray-100">
             {/* รูปภาพอาหาร */}
             <img src={item.pic_url} alt={item.name} className="w-20 h-20 object-cover rounded-lg" />

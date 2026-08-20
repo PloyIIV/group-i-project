@@ -1,4 +1,4 @@
-const menuList = [
+export const menuList = [
   {
     id: 1,
     name: "ผัดไทยกุ้งสด",

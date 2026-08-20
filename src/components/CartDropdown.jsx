@@ -3,13 +3,15 @@ import { menuList } from "../mock-data/menu";
 import { useNavigate } from "react-router-dom";
 import { MenuContext } from "../context/MenuContext";
 
-const CartDropdown = ({ setClick }) => {
+const CartDropdown = () => {
   const navigate = useNavigate();
-  const { totalCart, setTotalCart } = useContext(MenuContext);
+  const { totalCart, setTotalCart, setClick } = useContext(MenuContext);
 
   const handleButton = () => {
-    setClick(false);
-    navigate("/cart");
+    if(totalCart.length > 0) {
+      setClick(false);
+      navigate("/cart");
+    }
   };
 
   const handleUpdateQuantity = (id, amount) => {

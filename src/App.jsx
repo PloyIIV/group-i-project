@@ -1,8 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./components/Layout";
-import MenuList from "./pages/02_MenuList";
-import { MenuCard } from "./pages/03_MenuCard";
-import Cart from "./pages/04_Cart";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Layout from "./components/Layout"
+import MenuList from "./pages/02_MenuList"
+import MenuCard from "./pages/03_MenuCard"
+import Cart from "./pages/04_Cart"
+
 
 const router = createBrowserRouter([
   {

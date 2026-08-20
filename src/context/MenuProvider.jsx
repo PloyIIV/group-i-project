@@ -6,7 +6,7 @@ export const MenuProvider = ({children}) => {
     const [menu, setMenu] = useState(menuList);
 
     return(
-        <MenuContext.Provider value={menu, setMenu}>
+        <MenuContext.Provider value={{menu, setMenu}}>
             {children}
         </MenuContext.Provider>
     )

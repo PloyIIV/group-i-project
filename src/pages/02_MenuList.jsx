@@ -1,6 +1,6 @@
 import Hero from "../components/Hero.jsx";
 import { Link } from "react-router-dom";
-import { menuList } from "../mock-data/menu";
+import { menuList } from "../mock-data/menu.js";
 
 const MenuList = () => {
   return (

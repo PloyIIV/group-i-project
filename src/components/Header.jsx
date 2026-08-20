@@ -4,7 +4,6 @@ import shoppingCartIcon from "../assets/icon/shopping_cart_icon.png";
 function Header({ setClick, click }) {
   const navigate = useNavigate()
   return (
-    
     <header className="border-b border-orange-100 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         {/* The logo links back to the homepage. */}

@@ -5,8 +5,10 @@ import { useState } from "react";
 export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState(menuList);
   const [totalCart, setTotalCart] = useState([]);
+  const [click, setClick] = useState(false)
 
   const handleClickAddToCart = (menu) => {
+    setClick(true)
     if(totalCart.find((item) => item.id === menu.id)) {
       menu.quantity++
       setTotalCart([...totalCart])
@@ -19,7 +21,7 @@ export const MenuProvider = ({ children }) => {
 
    return (
     <MenuContext.Provider
-      value={{ menu, setMenu, handleClickAddToCart, totalCart, setTotalCart }}
+      value={{ menu, setMenu, handleClickAddToCart, totalCart, setTotalCart, setClick, click }}
     >
       {children}
     </MenuContext.Provider>

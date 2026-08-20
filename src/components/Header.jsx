@@ -1,14 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import shoppingCartIcon from "../assets/icon/shopping_cart_icon.png";
+import { useContext } from "react";
+import { MenuContext } from "../context/MenuContext";
 
-function Header({ setClick, click }) {
+function Header() {
   const navigate = useNavigate()
+  const { setClick, click } = useContext(MenuContext)
+  const handleButton = () => {
+    navigate('/')
+    setClick(false)
+  }
   return (
     <header className="border-b border-orange-100 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         {/* The logo links back to the homepage. */}
         {/* <a href="/" className="text-3xl font-bold text-red-600"> */}
-        <div onClick={() => navigate('/')} className="text-3xl font-bold text-red-600">
+        <div onClick={() => handleButton()} className="text-3xl font-bold text-red-600">
           Thai<span className="text-slate-900">Grub</span>
           </div>
         {/* </a> */}

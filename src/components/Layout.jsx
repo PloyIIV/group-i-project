@@ -1,14 +1,15 @@
 import { Outlet } from "react-router-dom"
 import Header from "./Header.jsx"
 import CartDropdown from "./CartDropdown.jsx"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { MenuContext } from "../context/MenuContext.jsx"
 
 const Layout = () => {
-    const [click, setClick] = useState(false)
+    const { click } = useContext(MenuContext)
     return (
         <div className="font-['Prompt']">
-            <Header setClick={setClick} click={click} />
-            {click && <CartDropdown setClick={setClick} />}
+            <Header />
+            {click && <CartDropdown />}
             <Outlet />
         </div>
     )

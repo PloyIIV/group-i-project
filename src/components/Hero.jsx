@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import menuList from '../mock-data/menu.js'
+import { menuList } from '../mock-data/menu.js'
 
 function Hero() {
   const [slideIndex, setSlideIndex] = useState(() => Math.floor(Math.random() * menuList.length))
@@ -46,11 +46,11 @@ function Hero() {
 
         <div className="max-w-3xl text-white">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-            Experience the Thai taste, the traditional way
+            Experience the authentic taste of Thailand.
           </h1>
           <a
             href="#recommendation"
-            className="mt-8 inline-block rounded-full bg-red-600 px-7 py-3 text-sm font-semibold transition hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="mt-8 inline-block rounded-full bg-red-700 px-7 py-3 text-sm font-semibold transition hover:bg-red-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             View Menu
           </a>
@@ -59,7 +59,7 @@ function Hero() {
 
       <section
         id="recommendation"
-        className="scroll-mt-6 bg-orange-50 px-5 py-10 sm:py-14"
+        className="scroll-mt-6 bg-[#f9f4e9] px-5 py-10 sm:py-14"
         aria-labelledby="recommendation-title"
       >
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
@@ -76,11 +76,16 @@ function Hero() {
               <h2 id="recommendation-title" className="text-3xl font-bold text-slate-900">
                 {recommendation.name}
               </h2>
-              <p className="mt-4 text-slate-600">
-                A delicious pick from our Thai menu
-                {recommendation.spiciness_level > 0
-                  ? ` with spice level ${recommendation.spiciness_level}/5.`
-                  : ' with no added spice.'}
+              <p className="mt-4 text-sm text-slate-600">
+                One of our delicious Thai dishes, with just a hint of spice.
+              </p>
+
+              <p className="mt-2 text-sm font-medium text-[#d84d1e]">
+                {recommendation.spiciness_level === 0
+                  ? "Not spicy"
+                  : `Spiciness level: ${"🌶️".repeat(
+                      recommendation.spiciness_level
+                    )}`}
               </p>
               <p className="mt-5 text-2xl font-bold text-red-600">
                 {`\u0E3F${recommendation.price}`}
@@ -89,16 +94,16 @@ function Hero() {
               <div className="mt-auto flex flex-wrap gap-3 pt-7">
                 <Link
                   to={`/${recommendation.id}`}
-                  className="rounded-full bg-red-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700"
+                  className="rounded-full bg-red-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700"
                 >
-                  View dish
+                  View Dish
                 </Link>
                 <button
                   type="button"
                   onClick={showAnotherRecommendation}
                   className="rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-red-600 hover:text-red-600"
                 >
-                  Surprise me
+                  Surprise Me!
                 </button>
               </div>
             </div>
@@ -106,11 +111,11 @@ function Hero() {
 
           <aside className="overflow-hidden rounded-3xl bg-white shadow-sm" aria-labelledby="signature-title">
             <div className="border-b border-slate-100 px-7 py-6 text-left">
-              <p className="text-sm font-semibold uppercase tracking-widest text-amber-600">
-                House specialties
+              <p className="text-sm font-semibold uppercase tracking-widest text-red-600">
+                Chef’s Specials
               </p>
               <h2 id="signature-title" className="mt-2 text-3xl font-bold text-slate-900">
-                Signature menus
+                Signature Menus
               </h2>
             </div>
 
@@ -130,9 +135,14 @@ function Hero() {
                     <h3 className="text-lg font-bold text-slate-900 transition group-hover:text-red-600">
                       {menuItem.name}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-500">
-                      Spice level {menuItem.spiciness_level}/5
-                    </p>
+                    
+                <p className="mt-2 text-sm font-medium text-[#d84d1e]">
+                  {menuItem.spiciness_level === 0
+                    ? "Not spicy"
+                    : `Spiciness level: ${"🌶️".repeat(
+                  menuItem.spiciness_level
+                  )}`}
+                </p>
                     <p className="mt-2 font-bold text-red-600">{`\u0E3F${menuItem.price}`}</p>
                   </div>
                   <span className="text-xl text-slate-300 transition group-hover:translate-x-1 group-hover:text-red-600" aria-hidden="true">

@@ -51,10 +51,10 @@ const MenuList = () => {
                     </p>
                   </div>
 
-                  <p className="mt-2 text-sm text-slate-500">
+                  <p className="mt-2 text-sm font-medium text-[#d84d1e]">
                     {menu.spiciness_level === 0
                       ? "Not spicy"
-                      : `Spiciness Level ${"🌶️".repeat(
+                      : `Spiciness Level: ${"🌶️".repeat(
                           menu.spiciness_level
                         )}`}
                   </p>

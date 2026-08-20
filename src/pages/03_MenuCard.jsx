@@ -7,9 +7,11 @@ export const MenuCard = () => {
 
   const { menu } = useContext(MenuContext);
 
+  console.log(useContext(MenuContext))
+
   const { id } = useParams();
 
-  const menuDetails = menuList.find((item)=> item.id === id)
+  const menuDetails = menu.find((item)=> item.id === id)
 
   console.log(menuDetails)
 

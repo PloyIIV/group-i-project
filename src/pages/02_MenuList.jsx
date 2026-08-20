@@ -11,21 +11,19 @@ const MenuList = () => {
         <div className="mx-auto max-w-7xl rounded-2xl bg-[#f9f4e9] p-5 shadow-xl sm:p-8">
           <div className="mb-8 flex items-center justify-between gap-4">
             <div>
-              <p className="mb-1 text-sm font-medium text-[#d84d1e]">
-                EMBER RESTAURANT
+              <p className="text-3xl font-bold text-red-600">
+                Thai<span className="text-slate-900">Grub</span>
               </p>
 
-              <h2 className="text-3xl font-bold text-[#123c35]">
-                เมนูทั้งหมด
+              <h2 className="text-l font-bold text-black">
+                Our Menu
               </h2>
+              <p>Browse our dishes and order your favorites!</p>
 
-              <p className="mt-2 text-sm text-slate-500">
-                เลือกเมนูที่คุณอยากทานได้เลย
-              </p>
             </div>
 
-            <span className="rounded-full bg-[#123c35] px-4 py-2 text-sm font-medium text-white">
-              {menuList.length} เมนู
+            <span className="rounded-full bg-red-700 px-4 py-2 text-sm font-medium text-white">
+              {menuList.length} Menu Items
             </span>
           </div>
 
@@ -44,25 +42,25 @@ const MenuList = () => {
 
                 <div className="p-4">
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-lg font-bold text-[#123c35]">
+                    <h3 className="text-lg font-bold text-shadow-black">
                       {menu.name}
                     </h3>
 
-                    <p className="whitespace-nowrap font-bold text-[#d84d1e]">
+                    <p className="whitespace-nowrap font-bold text-red-600">
                       ฿{menu.price}
                     </p>
                   </div>
 
                   <p className="mt-2 text-sm text-slate-500">
                     {menu.spiciness_level === 0
-                      ? "ไม่เผ็ด"
-                      : `ระดับความเผ็ด ${"🌶️".repeat(
+                      ? "Not spicy"
+                      : `Spiciness Level ${"🌶️".repeat(
                           menu.spiciness_level
                         )}`}
                   </p>
 
-                  <p className="mt-4 rounded-xl bg-[#123c35] px-4 py-2.5 text-center text-sm font-semibold text-white transition group-hover:bg-[#0b2d27]">
-                    ดูรายละเอียด
+                  <p className="mt-4 rounded-xl bg-red-100 border-1 px-4 py-2.5 text-center text-sm font-semibold text-red-700 transition group-hover:bg-red-300">
+                    View Dish
                   </p>
                 </div>
               </Link>

@@ -8,8 +8,10 @@ const CartDropdown = ({ setClick }) => {
   const { totalCart, setTotalCart } = useContext(MenuContext);
 
   const handleButton = () => {
-    setClick(false);
-    navigate("/cart");
+    if(totalCart.length > 0) {
+      setClick(false);
+      navigate("/cart");
+    }
   };
 
   const handleUpdateQuantity = (id, amount) => {

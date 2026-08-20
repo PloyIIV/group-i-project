@@ -4,7 +4,7 @@ import CartDropdown from "./CartDropdown.jsx"
 import { useState } from "react"
 
 const Layout = () => {
-    const [click, setClick] = useState(true)
+    const [click, setClick] = useState(false)
     return (
         <div className="font-['Prompt']">
             <Header setClick={setClick} click={click} />

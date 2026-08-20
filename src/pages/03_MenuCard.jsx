@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import menuList from "../mock-data/menu";
 import { useContext } from "react";
-import MenuList from "./02_MenuList";
 import { MenuContext } from "../context/MenuContext";
 
 export const MenuCard = () => {

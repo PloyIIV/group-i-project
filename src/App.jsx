@@ -4,6 +4,7 @@ import MenuList from "./pages/02_MenuList"
 import MenuCard from "./pages/03_MenuCard"
 import Cart from "./pages/04_Cart"
 
+
 const router = createBrowserRouter([{
   path: '/',
   element: <Layout />,
@@ -16,6 +17,8 @@ const router = createBrowserRouter([{
 
 function App() {
   return <RouterProvider router={router} />
-}
+    
+  }
+
 
 export default App

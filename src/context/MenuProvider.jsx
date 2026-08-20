@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export const MenuProvider = ({children}) => {
     const [menu, setMenu] = useState(menuList);
-
     return(
         <MenuContext.Provider value={{menu, setMenu}}>
             {children}

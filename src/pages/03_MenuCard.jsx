@@ -1,9 +1,11 @@
-import React from 'react'
 
-const MenuCard = () => {
+export const MenuCard = () => {
+  
   return (
-    <div>03_MenuCard</div>
-  )
-}
-
-export default MenuCard
+    <div>
+      <div>
+        <img alt="" src="" />
+      </div>
+    </div>
+  );
+};

@@ -140,3 +140,5 @@ const menuList = [
     spiciness_level: 1
   }
 ];
+
+export default menuList

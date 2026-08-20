@@ -1,8 +1,10 @@
-import React from 'react'
+import Hero from '../components/Hero.jsx'
 
 const MenuList = () => {
   return (
-    <div>02_MenuList</div>
+    <main id="menu">
+      <Hero />
+    </main>
   )
 }
 

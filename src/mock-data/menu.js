@@ -52,7 +52,7 @@ export const menuList = [
     id: 8,
     name: "ข้าวมันไก่",
     price: 60,
-    pic_url: "https://images.unsplash.com/photo-1626804475297-41608e074eb1?w=600&auto=format&fit=crop",
+    pic_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPJGqep_3ExRtiz9zT2GyZawa1tjoUrW8yn63TbgNHjacZnfAKnTcVZoWN&s=10",
     spiciness_level: 0
   },
   {

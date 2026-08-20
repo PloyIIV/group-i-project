@@ -10,8 +10,12 @@ const CartDropdown = () => {
         <div>
             {menuList.map((item) => {
                 return (
-                    <div>
-                        
+                    <div className='flex items-center'>
+                        <img className='w-20 h-20 object-cover rounded-2xl' src={item.pic_url} alt={item.name} />
+                        <div>
+                            <p>{item.name}</p>
+                            <p>จำนวน: 1 จาน</p>
+                        </div>
                     </div>
                 )
             })}

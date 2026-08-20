@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Header from "./Header.jsx"
-import CartDropdown from "./CartDropdown"
+import CartDropdown from "./CartDropdown.jsx"
 import { useState } from "react"
 
 const Layout = () => {

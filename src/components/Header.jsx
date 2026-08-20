@@ -1,4 +1,4 @@
-import shoppingCartIcon from '../assets/icon/shopping_cart_icon.png'
+import shoppingCartIcon from "../assets/icon/shopping_cart_icon.png";
 
 function Header() {
   return (
